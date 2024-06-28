@@ -7,10 +7,9 @@ This project is a web-based AI agent that performs web searches using OpenAI's L
 
 ## Features
 
-- Perform web searches using DuckDuckGo API
-- Generate responses using OpenAI's LLaMA 3 model
+- Perform web searches using GoogleSearch API through SerPapi API
+- Generate responses using LLaMA 3 model through Replicate API
 - Web interface for interacting with the AI agent
-- Ability to shut down the server from the web interface
 
 ## Requirements
 
@@ -48,11 +47,13 @@ pip install -r requirements.txt
 ```
 
 ### 4. Set Replicate API Token
-Set your Replicate API token as an environment variable.
+Change your Replicate API token in config.yaml file if needed.<br>
 
 ```bash
-export REPLICATE_API_TOKEN=your_replicate_api_token_here
-REPLICATE_API_TOKEN=your_replicate_api_token_here`
+replicate:
+  api_key: your_replicate_api_key
+serpapi:
+  api_key: your_serpapi_api_key
 ```
 
 ### 5. Run the Flask Server
