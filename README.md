@@ -42,7 +42,7 @@ It's recommended to use a virtual environment to manage dependencies.
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+source venv/bin/activate
 ```
 
 ### 3. Install Dependencies
@@ -52,8 +52,8 @@ Install the required packages using pip.
 pip install -r requirements.txt
 ```
 
-### 4. Set Replicate API Token
-Change your Replicate API token in config.yaml file if needed.<br>
+### 4. Set API Token
+Change your Replicate and SerpApi API token in config.yaml file if needed.<br>
 
 ```bash
 replicate:
