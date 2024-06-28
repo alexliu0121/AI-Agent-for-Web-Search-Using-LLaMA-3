@@ -62,7 +62,22 @@ serpapi:
   api_key: your_serpapi_api_key
 ```
 
-### 5. Run the Flask Server
+### 5. Set the sever port
+The sever port is default to 5000.<br>
+Change the sever port if other application is taking that port.<br>
+```bash
+def run_server():
+    # Change the port here if 5000 is acquired by other applications
+    server = make_server('127.0.0.1', your_port_number, app)
+    server.serve_forever()
+
+if __name__ == '__main__':
+    # Change the port here if 5000 is acquired by other applications
+    Timer(1, lambda: webbrowser.open('http://127.0.0.1:your_port_number/')).start()
+    run_server()
+```
+
+### 6. Run the Flask Server
 Start the Flask server. The server will automatically open your default web browser to the web interface.
 
 ```bash
