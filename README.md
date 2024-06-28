@@ -2,24 +2,24 @@
 
 # AI Agent Web Search
 
-This project is a web-based AI agent that performs web searches using OpenAI's LLaMA 3 model and DuckDuckGo API. It uses Flask as the web framework and Replicate as the platform to run the LLaMA 3 model.
+This project is a web-based AI agent that performs web searches using LLaMA 3 model and SerpApi API. It uses Flask as the web framework and Replicate as the platform to run the LLaMA 3 model.
 
 ## Features
 
-- Perform web searches using GoogleSearch API through SerPapi API
+- Perform web searches using GoogleSearch API through SerpApi API
 - Generate responses using LLaMA 3 model through Replicate API
 - Web interface for interacting with the AI agent
 
 ## Notes
 
-- Noted that the api keys I'm using is free so it's not unlimited
-- Both Replicate and SerPapi have very limited amount of free usage
+- Noted that the api keys I'm using are free so they're not unlimited
+- Both Replicate and SerpApi have very limited amount of free usage
 - If there's any authentication errors, that means it reaches the limitation
 - Feel free to contact me if you need another API key to evaluate the function of the agent
 
 ## Requirements
 
-- Python 3.11.4
+- Python==3.11.4
 - Flask==3.0.3
 - google_search_results==2.4.2
 - PyYAML==6.0.1
