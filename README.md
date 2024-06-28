@@ -32,7 +32,7 @@ git clone https://github.com/alexliu0121/AI-Agent-for-Web-Search-Using-LLaMA-3.g
 cd AI-Agent-for-Web-Search-Using-LLaMA-3
 ```
 
-###2. Create a Virtual Environment
+### 2. Create a Virtual Environment
 It's recommended to use a virtual environment to manage dependencies.
 
 ```bash
@@ -40,14 +40,14 @@ python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 ```
 
-###3. Install Dependencies
+### 3. Install Dependencies
 Install the required packages using pip.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-###4. Set Replicate API Token
+### 4. Set Replicate API Token
 Set your Replicate API token as an environment variable.
 
 ```bash
@@ -55,19 +55,19 @@ export REPLICATE_API_TOKEN=your_replicate_api_token_here
 REPLICATE_API_TOKEN=your_replicate_api_token_here`
 ```
 
-###5. Run the Flask Server
+### 5. Run the Flask Server
 Start the Flask server. The server will automatically open your default web browser to the web interface.
 
 ```bash
 python app.py
 ```
 
-###Usage
+## Usage
 Enter your question in the input field and click "Ask" to get a response from the AI agent.<br>
 Click "Clear" to clear the response area.<br>
 Click "Shutdown" to shut down the server and close the browser window.<br>
 
-###File Structure
+## File Structure
 ```plaintext
 .
 ├── app.py                  # Main Flask application
@@ -86,8 +86,8 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-###License
+## License
 This project is licensed under the MIT License.
 
-###Contact
+## Contact
 If you have any questions or feedback, feel free to reach out to alexliu0121@gmail.com.
