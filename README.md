@@ -1,14 +1,93 @@
 # AI-Agent-for-Web-Search-Using-LLaMA-3
 <h3>AI Agent for Web Search Using LLaMA 3</h3>
 
-Check all the required libraries in "requirements.txt" file.<br>
-You can automatically get all the libraries by using the following command:
+# AI Agent Web Search
+
+This project is a web-based AI agent that performs web searches using OpenAI's LLaMA 3 model and DuckDuckGo API. It uses Flask as the web framework and Replicate as the platform to run the LLaMA 3 model.
+
+## Features
+
+- Perform web searches using DuckDuckGo API
+- Generate responses using OpenAI's LLaMA 3 model
+- Web interface for interacting with the AI agent
+- Ability to shut down the server from the web interface
+
+## Requirements
+
+- Python 3.11.4
+- Flask==3.0.3
+- google_search_results==2.4.2
+- PyYAML==6.0.1
+- PyYAML==6.0.1
+- replicate==0.26.1
+- serpapi==0.1.5
+- Werkzeug==3.0.3
+
+## Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/alexliu0121/AI-Agent-for-Web-Search-Using-LLaMA-3.git
+cd AI-Agent-for-Web-Search-Using-LLaMA-3
 ```
+
+###2. Create a Virtual Environment
+It's recommended to use a virtual environment to manage dependencies.
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
+
+###3. Install Dependencies
+Install the required packages using pip.
+
+```bash
 pip install -r requirements.txt
 ```
-The environment
 
+###4. Set Replicate API Token
+Set your Replicate API token as an environment variable.
 
+```bash
+export REPLICATE_API_TOKEN=your_replicate_api_token_here
+REPLICATE_API_TOKEN=your_replicate_api_token_here`
+```
 
-<h3>Contact</h3>
-If you have any questions, feel free to contact me at alexliu0121@gmail.com.<br>
+###5. Run the Flask Server
+Start the Flask server. The server will automatically open your default web browser to the web interface.
+
+```bash
+python app.py
+```
+
+###Usage
+Enter your question in the input field and click "Ask" to get a response from the AI agent.<br>
+Click "Clear" to clear the response area.<br>
+Click "Shutdown" to shut down the server and close the browser window.<br>
+
+###File Structure
+```plaintext
+.
+├── app.py                  # Main Flask application
+├── config.yaml             # Configuration file for the project
+├── requirements.txt        # List of project dependencies
+└── templates
+    └── index.html          # HTML template for the web interface
+```
+
+Example Commands
+Start the server:
+```bash
+python app.py
+```
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+###License
+This project is licensed under the MIT License.
+
+###Contact
+If you have any questions or feedback, feel free to reach out to alexliu0121@gmail.com.
