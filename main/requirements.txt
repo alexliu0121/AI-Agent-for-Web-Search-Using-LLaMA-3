@@ -1,0 +1,7 @@
+Flask==3.0.3
+google_search_results==2.4.2
+PyYAML==6.0.1
+PyYAML==6.0.1
+replicate==0.26.1
+serpapi==0.1.5
+Werkzeug==3.0.3
