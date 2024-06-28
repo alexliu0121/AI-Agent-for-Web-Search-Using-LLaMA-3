@@ -1,5 +1,4 @@
 # AI-Agent-for-Web-Search-Using-LLaMA-3
-<h3>AI Agent for Web Search Using LLaMA 3</h3>
 
 # AI Agent Web Search
 
