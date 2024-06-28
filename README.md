@@ -11,6 +11,13 @@ This project is a web-based AI agent that performs web searches using OpenAI's L
 - Generate responses using LLaMA 3 model through Replicate API
 - Web interface for interacting with the AI agent
 
+## Notes
+
+- Noted that the api keys I'm using is free so it's not unlimited
+- Both Replicate and SerPapi have very limited amount of free usage
+- If there's any authentication errors, that means it reaches the limitation
+- Feel free to contact me if you need another API key to evaluate the function of the agent
+
 ## Requirements
 
 - Python 3.11.4
