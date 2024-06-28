@@ -94,7 +94,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the GNU General Public License v3.0 License.
 
 ## Contact
 If you have any questions or feedback, feel free to reach out to alexliu0121@gmail.com.
