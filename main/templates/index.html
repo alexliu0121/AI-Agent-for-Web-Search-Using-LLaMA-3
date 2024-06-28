@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Web Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Agent Web Search</h1>
+        <label for="question">Enter your question:</label>
+        <input type="text" id="question" name="question">
+        <button onclick="askQuestion()">Ask</button>
+        <button onclick="clearResponses()">Clear</button>
+        <button onclick="shutdown()">Shutdown</button>
+        <textarea id="response" readonly></textarea>
+    </div>
+    <script>
+        async function askQuestion() {
+            const question = document.getElementById('question').value;
+            if (!question) return;
+
+            const responseArea = document.getElementById('response');
+            responseArea.value += `Q: ${question}\n`;
+
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ question })
+            });
+
+            const data = await response.json();
+            responseArea.value += `A: ${data.response}\n\n`;
+        }
+
+        function clearResponses() {
+            document.getElementById('response').value = '';
+        }
+
+        async function shutdown() {
+            if (confirm("Are you sure you want to shut down the server?")) {
+                window.close();
+                const response = await fetch('/shutdown', {
+                    method: 'POST'
+                });
+                alert(await response.text());
+            }
+        }
+    </script>
+</body>
+</html>
